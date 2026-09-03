@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — GoVidCo</title>
+<meta name="description" content="How GoVidCo collects, uses, and protects information from clients, editors, and website visitors.">
+<link rel="canonical" href="https://www.govidco.com/privacy.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+  :root {
+    --black: #0B0B0D;
+    --charcoal: #16171A;
+    --charcoal-2: #1D1E22;
+    --red: #C8202D;
+    --red-dark: #A11B26;
+    --white: #FFFFFF;
+    --gray: #A8ADB5;
+    --gray-dim: #6E7280;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: inherit; text-decoration: none; }
+  .container { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(11,11,13,0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 26px 32px; max-width: 1280px; margin: 0 auto;
+  }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 25px; letter-spacing: -0.02em; }
+  .logo img { height: 34px; width: auto; display: block; }
+  .nav-links { display: flex; gap: 36px; font-size: 16px; font-weight: 600; }
+  .nav-links a { color: var(--gray); transition: color 0.2s; }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta {
+    background: var(--red); color: var(--white); padding: 13px 26px;
+    border-radius: 8px; font-size: 16px; font-weight: 700;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--red-dark); }
+
+  .legal-hero {
+    padding: 64px 24px 40px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .legal-hero .eyebrow {
+    display: inline-block; color: var(--red); font-size: 13px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    border: 1px solid rgba(200,32,45,0.4); background: rgba(200,32,45,0.08);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 18px;
+  }
+  .legal-hero h1 { font-size: clamp(28px, 4.5vw, 42px); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 10px; }
+  .legal-hero .updated { color: var(--gray); font-size: 14px; }
+
+  .legal-body { padding: 56px 0 90px; }
+  .legal-body h2 {
+    font-size: 19px; font-weight: 800; margin: 40px 0 12px;
+    letter-spacing: -0.01em; color: var(--white);
+  }
+  .legal-body h2:first-child { margin-top: 0; }
+  .legal-body p { color: var(--gray); font-size: 15.5px; margin-bottom: 14px; }
+  .legal-body ul { color: var(--gray); font-size: 15.5px; margin: 0 0 14px 22px; }
+  .legal-body li { margin-bottom: 8px; }
+  .legal-body strong { color: var(--white); }
+  .legal-body a.inline-link { color: var(--red); font-weight: 600; }
+  .legal-body a.inline-link:hover { color: var(--red-dark); }
+
+
+  @media (max-width: 860px) {
+    .nav-links { display: none; }
+  }
+
+  /* NAV DROPDOWN */
+  .nav-dropdown { position: relative; }
+  .nav-dropdown-menu {
+    position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-6px);
+    background: var(--charcoal); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px; padding: 8px; margin-top: 14px; min-width: 250px;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+  }
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown-menu:hover {
+    opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
+  }
+  .nav-dropdown-menu a {
+    display: block; padding: 10px 14px; border-radius: 6px;
+    font-size: 14.5px; font-weight: 600; color: var(--gray); text-align: left;
+  }
+  .nav-dropdown-menu a:hover { background: var(--charcoal-2); color: var(--white); }
+
+  /* WORKFLOW */
+  .workflow-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .workflow-step {
+    background: var(--black); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px; padding: 26px 22px;
+  }
+  .workflow-num { color: var(--red); font-weight: 800; font-size: 22px; margin-bottom: 10px; }
+  .workflow-step h3 { font-size: 17px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.01em; }
+  .workflow-step p { color: var(--gray); font-size: 14px; }
+
+  /* FOOTER (rebuilt, overrides earlier footer rules) */
+  footer { padding: 56px 24px 28px; text-align: left; border-top: 1px solid rgba(255,255,255,0.08); color: var(--gray-dim); font-size: 13.5px; }
+  .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr; gap: 32px; padding-bottom: 40px; }
+  .footer-brand .footer-logo { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-weight: 800; color: var(--white); }
+  .footer-brand .footer-logo img { height: 20px; width: auto; display: block; }
+  .footer-brand p { color: var(--gray-dim); font-size: 13px; }
+  .footer-col h4 { color: var(--white); font-size: 12.5px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 14px; }
+  .footer-col a { display: block; color: var(--gray-dim); font-size: 13.5px; margin-bottom: 10px; }
+  .footer-col a:hover { color: var(--gray); }
+  .footer-bottom { text-align: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 12.5px; }
+
+  @media (max-width: 860px) {
+    .footer-top { grid-template-columns: repeat(2, 1fr); }
+    .workflow-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .footer-top { grid-template-columns: 1fr; }
+    .workflow-grid { grid-template-columns: 1fr; }
+  }
+
+  /* MOBILE MENU */
+  .nav-right { display: flex; align-items: center; gap: 14px; }
+  .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+  .menu-toggle span { width: 24px; height: 2px; background: var(--white); display: block; transition: transform 0.2s ease, opacity 0.2s ease; }
+  .menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-toggle.open span:nth-child(2) { opacity: 0; }
+  .menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu {
+    display: none; flex-direction: column;
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.25s ease;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    background: var(--black);
+  }
+  .mobile-menu.open { max-height: 700px; }
+  .mobile-menu a { padding: 14px 24px; color: var(--gray); font-weight: 600; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .mobile-menu a:hover { color: var(--white); background: var(--charcoal); }
+  .mobile-menu a.mobile-cta { color: var(--red); font-weight: 800; }
+  @media (max-width: 860px) {
+    .menu-toggle { display: flex; }
+    .mobile-menu { display: flex; }
+  }
+
+  /* WHATSAPP FAB */
+  .whatsapp-fab {
+    position: fixed; bottom: 24px; right: 24px; z-index: 60;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #25D366; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35); transition: transform 0.2s ease;
+  }
+  .whatsapp-fab:hover { transform: scale(1.08); }
+  .whatsapp-fab svg { width: 28px; height: 28px; }
+  @media (max-width: 560px) {
+    .whatsapp-fab { width: 50px; height: 50px; bottom: 16px; right: 16px; }
+    .whatsapp-fab svg { width: 24px; height: 24px; }
+  }
+
+  /* COOKIE BANNER */
+  .cookie-banner {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 70;
+    background: var(--charcoal-2); border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 16px 24px; transform: translateY(100%); transition: transform 0.3s ease;
+  }
+  .cookie-banner.show { transform: translateY(0); }
+  .cookie-banner-inner { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  .cookie-banner-inner p { color: var(--gray); font-size: 13.5px; margin: 0; }
+  .cookie-banner-inner a { color: var(--white); text-decoration: underline; transition: color 0.2s; }
+  .cookie-banner-inner a:hover { color: var(--red); }
+  .cookie-accept-btn { padding: 10px 22px; font-size: 14px; flex-shrink: 0; border: none; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="GoVidCo">
+    </a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a href="index.html#services" class="nav-dropdown-toggle">Services</a>
+        <div class="nav-dropdown-menu">
+          <a href="index.html#svc-shorts">Shorts, Reels &amp; TikTok</a>
+          <a href="index.html#svc-faceless">Faceless Channel System</a>
+          <a href="index.html#svc-podcast">Podcast &amp; Interview Editing</a>
+          <a href="index.html#svc-ads">Ad Creatives</a>
+          <a href="index.html#svc-youtube">YouTube Long-Form Editing</a>
+          <a href="index.html#svc-corporate">Corporate &amp; Brand Video</a>
+        </div>
+      </div>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="index.html#workflow">Workflow</a>
+      <a href="index.html#about">Leadership</a>
+      <a href="join.html">Careers</a>
+    </div>
+    <div class="nav-right">
+      <a href="contact.html" class="nav-cta">Get a Quote</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#services">Services</a>
+    <a href="index.html#svc-shorts">Shorts, Reels &amp; TikTok</a>
+    <a href="index.html#svc-faceless">Faceless Channel System</a>
+    <a href="index.html#svc-podcast">Podcast &amp; Interview Editing</a>
+    <a href="index.html#svc-ads">Ad Creatives</a>
+    <a href="index.html#svc-youtube">YouTube Long-Form Editing</a>
+    <a href="index.html#svc-corporate">Corporate &amp; Brand Video</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="index.html#workflow">Workflow</a>
+    <a href="index.html#about">Leadership</a>
+    <a href="join.html">Careers</a>
+    <a href="contact.html" class="mobile-cta">Get a Quote</a>
+  </div>
+</header>
+
+<section class="legal-hero">
+  <div class="eyebrow">Legal</div>
+  <h1>Privacy Policy</h1>
+  <div class="updated">Last updated: July 11, 2026</div>
+</section>
+
+<section class="legal-body">
+  <div class="container">
+
+    <h2>1. Who We Are</h2>
+    <p>GoVidCo ("GoVidCo," "we," "us," or "our") is a video editing agency operating at govidco.com, founded and operated by Md. Shariful Islam. This policy explains what information we collect from clients, prospective editors, and website visitors, and how we use it.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>We collect information you provide directly to us, primarily through our website forms:</p>
+    <ul>
+      <li><strong>Client project inquiries</strong> (via the "Get a Quote" form): name, email address, project details, timelines, and links to raw footage you choose to share.</li>
+      <li><strong>Editor applications</strong> (via the "Join Our Team" form): name, email address, WhatsApp number, software skills, portfolio links, years of experience, and expected rate.</li>
+      <li><strong>Direct correspondence</strong>: information you share with us by email or messaging when discussing a project.</li>
+    </ul>
+    <p>We do not knowingly collect information from visitors under the age of 18, and our services are intended for business use by adults.</p>
+
+    <h2>3. How We Use Your Information</h2>
+    <ul>
+      <li>To respond to project inquiries and editor applications.</li>
+      <li>To set up and manage a project workspace, match projects with an appropriate editor, and coordinate delivery.</li>
+      <li>To communicate with you about your project or application, including invoices and payment coordination.</li>
+      <li>To improve our services and website.</li>
+    </ul>
+
+    <h2>4. The Identity Firewall — How We Protect Your Information Internally</h2>
+    <p>GoVidCo operates on a strict internal "Identity Firewall": clients and the editors working on their projects do not have direct access to one another's identifying or contact information. Raw project files are shared with editors using a project code rather than your name or company. Only GoVidCo's founder is in direct contact with both clients and editors. This is a business practice designed to protect your privacy and the privacy of the editors working on your project, in addition to the data-handling practices described in this policy.</p>
+
+    <h2>5. Sharing of Information</h2>
+    <p>We do not sell your personal information. We share information only as needed to deliver our services:</p>
+    <ul>
+      <li>With the specific editor assigned to your project, limited to what is necessary to complete the work, and with client-identifying details removed wherever possible.</li>
+      <li>With service providers that support our operations (for example, Google Workspace for email and file storage, and n8n for workflow automation), who process information on our behalf.</li>
+      <li>When required by law, or to protect the rights, safety, or property of GoVidCo, our clients, or our editors.</li>
+    </ul>
+
+    <h2>6. Data Retention</h2>
+    <p>We retain project-related information for as long as needed to complete the relevant project, maintain business records, and comply with legal or tax obligations. You may request deletion of your information at any time, subject to records we are required to keep for legitimate business or legal purposes.</p>
+
+    <h2 id="cookies">7. Cookies and Analytics</h2>
+    <p>Our website uses a small number of essential and analytics cookies. Essential cookies (for example, remembering that you've dismissed our cookie notice) are required for the site to function and cannot be disabled. We also use privacy-conscious analytics (such as Cloudflare Web Analytics) to understand aggregate website traffic — this does not use tracking cookies or collect personally identifiable information. We do not use advertising or cross-site tracking cookies, and we do not sell data to advertisers. You can control cookies through your browser settings at any time.</p>
+
+    <h2>8. Your Rights</h2>
+    <p>Depending on your location, you may have rights to access, correct, or delete the personal information we hold about you, or to object to certain uses of it. To exercise any of these rights, contact us using the details below.</p>
+
+    <h2>9. Security</h2>
+    <p>We take reasonable measures to protect the information we hold, including restricting access to project files and using reputable third-party providers for email, file storage, and automation. No method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top of this page reflects the most recent revision. Continued use of our website or services after changes take effect constitutes acceptance of the updated policy.</p>
+
+    <h2>11. Contact Us</h2>
+    <p>Questions about this Privacy Policy or how we handle your information can be sent to <a class="inline-link" href="mailto:admin@govidco.com">admin@govidco.com</a>.</p>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top container">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="logo.png" alt="GoVidCo">
+      </div>
+      <p>From Vision to Viral.</p>
+      <p style="margin-top:8px;"><a href="https://wa.me/8801797861891" target="_blank" rel="noopener" style="color:var(--gray-dim); display:inline-flex; align-items:center; gap:6px;"><img src="icon-whatsapp.svg" alt="" width="14" height="14">WhatsApp: +880 1797-861891</a></p>
+      <p style="margin-top:8px;"><a href="https://www.linkedin.com/company/go-vidco/" target="_blank" rel="noopener" style="color:var(--gray-dim); display:inline-flex; align-items:center; gap:6px;"><img src="icon-linkedin.png" alt="" width="14" height="14">LinkedIn: GoVidCo</a></p>
+      <p style="margin-top:8px;"><a href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener" style="color:var(--gray-dim); display:inline-flex; align-items:center; gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex:none;" aria-hidden="true"><path d="M23.5 6.2c-.3-1.1-1.1-1.9-2.2-2.2C19.3 3.5 12 3.5 12 3.5s-7.3 0-9.3.5c-1.1.3-1.9 1.1-2.2 2.2C0 8.2 0 12 0 12s0 3.8.5 5.8c.3 1.1 1.1 1.9 2.2 2.2 2 .5 9.3.5 9.3.5s7.3 0 9.3-.5c1.1-.3 1.9-1.1 2.2-2.2.5-2 .5-5.8.5-5.8s0-3.8-.5-5.8zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"/></svg>YouTube: @GoVidCo</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="index.html#about">Leadership</a>
+      <a href="index.html#workflow">Workflow</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+        <a href="index.html#svc-shorts">Shorts, Reels &amp; TikTok</a>
+        <a href="index.html#svc-faceless">Faceless Channel System</a>
+        <a href="index.html#svc-podcast">Podcast &amp; Interview Editing</a>
+        <a href="index.html#svc-ads">Ad Creatives</a>
+        <a href="index.html#svc-youtube">YouTube Long-Form Editing</a>
+        <a href="index.html#svc-corporate">Corporate &amp; Brand Video</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="index.html#faq">FAQ</a>
+      <a href="join.html">Careers</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 GoVidCo. All rights reserved. &middot; govidco.com</div>
+  </div>
+</footer>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  (function(){
+    var btn = document.getElementById('menuToggle');
+    var menu = document.getElementById('mobileMenu');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', function(){
+      var isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
+
+<a href="https://wa.me/8801797861891?text=Hi%20GoVidCo%2C%20I%27d%20like%20to%20discuss%20a%20video%20editing%20project" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Chat with GoVidCo on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M16.001 3C9.096 3 3.5 8.596 3.5 15.5c0 2.36.656 4.566 1.796 6.45L3 29l7.24-2.257A12.44 12.44 0 0 0 16.001 28C22.906 28 28.5 22.404 28.5 15.5S22.906 3 16.001 3zm0 22.7c-2.02 0-3.905-.59-5.49-1.606l-.394-.25-4.3 1.34 1.37-4.19-.257-.406a10.19 10.19 0 0 1-1.63-5.588c0-5.635 4.585-10.22 10.22-10.22 5.635 0 10.22 4.585 10.22 10.22 0 5.635-4.585 10.22-10.22 10.22zm5.6-7.66c-.307-.154-1.815-.896-2.096-.998-.28-.103-.485-.154-.69.153-.204.307-.79.998-.968 1.203-.178.205-.357.23-.663.077-.307-.154-1.296-.478-2.469-1.524-.913-.814-1.53-1.82-1.708-2.127-.178-.307-.019-.473.135-.626.138-.138.307-.358.46-.537.154-.18.205-.307.307-.512.102-.204.05-.384-.026-.537-.077-.154-.69-1.662-.945-2.276-.249-.598-.502-.517-.69-.527l-.588-.01c-.204 0-.537.077-.818.384-.28.307-1.07 1.045-1.07 2.55 0 1.505 1.096 2.96 1.25 3.164.153.205 2.157 3.293 5.227 4.618.73.315 1.3.503 1.744.644.733.233 1.4.2 1.927.121.588-.088 1.815-.742 2.07-1.459.256-.716.256-1.33.18-1.459-.077-.128-.282-.205-.588-.358z"/></svg>
+</a>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-inner">
+    <p>We use cookies to improve your experience and analyze site traffic. By continuing, you agree to our <a href="privacy.html#cookies">Cookie Policy</a>.</p>
+    <button id="cookieAccept" class="btn btn-primary cookie-accept-btn">Accept</button>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var banner = document.getElementById('cookieBanner');
+    var btn = document.getElementById('cookieAccept');
+    if (!banner || !btn) return;
+    if (!localStorage.getItem('govidco_cookie_consent')) {
+      setTimeout(function(){ banner.classList.add('show'); }, 700);
+    }
+    btn.addEventListener('click', function(){
+      localStorage.setItem('govidco_cookie_consent', '1');
+      banner.classList.remove('show');
+    });
+  })();
+</script>
+
+<!-- Cloudflare Web Analytics is active for govidco.com via Cloudflare's automatic edge injection
+     (dashboard: Analytics & Logs -> Web Analytics -> govidco.com -> RUM = "Enable, excluding visitor
+     data in the EU"). Cloudflare injects the beacon into every response at the edge, so no manual
+     script tag is needed here -- confirmed live in the dashboard on 2026-08-26. -->
+</body>
+</html>

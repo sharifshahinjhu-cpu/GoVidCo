@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get a Quote — GoVidCo</title>
+<meta name="description" content="Tell GoVidCo about your project and get matched with a dedicated editor. Shorts, Reels, TikToks, podcasts, ads, and corporate video.">
+<link rel="canonical" href="https://www.govidco.com/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.govidco.com/contact.html">
+<meta property="og:title" content="Get a Quote — GoVidCo">
+<meta property="og:description" content="Tell GoVidCo about your project and get matched with a dedicated editor. Shorts, Reels, TikToks, podcasts, ads, and corporate video.">
+<meta property="og:image" content="https://www.govidco.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Get a Quote — GoVidCo">
+<meta name="twitter:description" content="Tell GoVidCo about your project and get matched with a dedicated editor. Shorts, Reels, TikToks, podcasts, ads, and corporate video.">
+<meta name="twitter:image" content="https://www.govidco.com/og-image.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+  :root {
+    --black: #0B0B0D;
+    --charcoal: #16171A;
+    --charcoal-2: #1D1E22;
+    --red: #C8202D;
+    --red-dark: #A11B26;
+    --white: #FFFFFF;
+    --gray: #A8ADB5;
+    --gray-dim: #6E7280;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: inherit; text-decoration: none; }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(11,11,13,0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 26px 32px; max-width: 1280px; margin: 0 auto;
+  }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 25px; letter-spacing: -0.02em; }
+  .logo img { height: 34px; width: auto; display: block; }
+  .nav-links { display: flex; gap: 36px; font-size: 16px; font-weight: 600; }
+  .nav-links a { color: var(--gray); transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--white); }
+  .nav-cta {
+    background: var(--red); color: var(--white); padding: 13px 26px;
+    border-radius: 8px; font-size: 16px; font-weight: 700;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--red-dark); }
+
+  .hero {
+    padding: 100px 24px 80px;
+    text-align: center;
+    background:
+      radial-gradient(ellipse 90% 100% at 50% 42%, rgba(6,6,8,0.88) 0%, rgba(6,6,8,0.6) 60%, rgba(6,6,8,0.32) 100%),
+      radial-gradient(ellipse at 50% 0%, rgba(200,32,45,0.22), transparent 60%),
+      url('hero-contact.jpg') top right / cover no-repeat,
+      var(--black);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .eyebrow {
+    display: inline-block;
+    color: var(--red);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid rgba(200,32,45,0.4);
+    background: rgba(200,32,45,0.08);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 5.5vw, 54px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    max-width: 780px;
+    margin: 0 auto 20px;
+  }
+  .hero h1 span { color: var(--red); }
+  .hero p {
+    color: var(--gray);
+    font-size: clamp(16px, 2vw, 19px);
+    max-width: 640px;
+    margin: 0 auto 36px;
+  }
+  .hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 14px 26px; border-radius: 8px;
+    font-weight: 700; font-size: 15px; transition: all 0.2s;
+  }
+  .btn-primary { background: var(--red); color: var(--white); }
+  .btn-primary:hover { background: var(--red-dark); transform: translateY(-1px); }
+  .btn-secondary { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.25); }
+  .btn-secondary:hover { border-color: var(--white); }
+
+  section { padding: 90px 0; }
+  .section-head { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+  .section-tag { color: var(--red); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px; display: block; }
+  .section-head h2 { font-size: clamp(26px, 4vw, 38px); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 14px; }
+  .section-head p { color: var(--gray); font-size: 16px; }
+
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .step-card { text-align: center; padding: 0 8px; }
+  .step-num {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--red); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 18px; margin: 0 auto 16px;
+    transition: transform 0.2s;
+  }
+  .step-card:hover .step-num { transform: scale(1.1); }
+  .step-card h3 { font-size: 16.5px; font-weight: 800; margin-bottom: 8px; }
+  .step-card p { color: var(--gray); font-size: 14px; }
+
+  .services-recap { background: var(--charcoal); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .recap-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .recap-item {
+    background: var(--black); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px; padding: 16px 18px; font-size: 14.5px; font-weight: 700;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .recap-item:hover { border-color: rgba(200,32,45,0.5); transform: translateY(-3px); }
+  .recap-item span { display: block; color: var(--gray); font-size: 13px; font-weight: 400; margin-top: 4px; }
+
+  .quote { text-align: center; }
+  .quote-card {
+    max-width: 620px; margin: 0 auto;
+    background: linear-gradient(160deg, var(--charcoal-2), var(--charcoal));
+    border: 1px solid rgba(200,32,45,0.3);
+    border-radius: 18px;
+    padding: 56px 40px;
+    transition: border-color 0.2s;
+  }
+  .quote-card:hover { border-color: rgba(200,32,45,0.6); }
+  .quote-card h2 { font-size: clamp(24px, 3.5vw, 34px); font-weight: 800; margin-bottom: 14px; }
+  .quote-card p { color: var(--gray); margin-bottom: 30px; }
+  .contact-email {
+    font-size: 16px; font-weight: 700; color: var(--red);
+    display: inline-block; margin-top: 18px;
+    transition: color 0.2s;
+  }
+  .contact-email:hover { color: var(--white); }
+
+
+  @media (max-width: 860px) {
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .recap-list { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+  }
+  @media (max-width: 560px) {
+    .steps { grid-template-columns: 1fr; }
+    section { padding: 64px 0; }
+    .hero { padding: 72px 20px 56px; }
+  }
+
+  /* NAV DROPDOWN */
+  .nav-dropdown { position: relative; }
+  .nav-dropdown-menu {
+    position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-6px);
+    background: var(--charcoal); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px; padding: 8px; margin-top: 14px; min-width: 250px;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+  }
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown-menu:hover {
+    opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
+  }
+  .nav-dropdown-menu a {
+    display: block; padding: 10px 14px; border-radius: 6px;
+    font-size: 14.5px; font-weight: 600; color: var(--gray); text-align: left;
+  }
+  .nav-dropdown-menu a:hover { background: var(--charcoal-2); color: var(--white); }
+
+  /* WORKFLOW */
+  .workflow-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .workflow-step {
+    background: var(--black); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px; padding: 26px 22px;
+  }
+  .workflow-num { color: var(--red); font-weight: 800; font-size: 22px; margin-bottom: 10px; }
+  .workflow-step h3 { font-size: 17px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.01em; }
+  .workflow-step p { color: var(--gray); font-size: 14px; }
+
+  /* FOOTER (rebuilt, overrides earlier footer rules) */
+  footer { padding: 56px 24px 28px; text-align: left; border-top: 1px solid rgba(255,255,255,0.08); color: var(--gray-dim); font-size: 13.5px; }
+  .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr; gap: 32px; padding-bottom: 40px; }
+  .footer-brand .footer-logo { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-weight: 800; color: var(--white); }
+  .footer-brand .footer-logo img { height: 20px; width: auto; display: block; }
+  .footer-brand p { color: var(--gray-dim); font-size: 13px; }
+  .footer-col h4 { color: var(--white); font-size: 12.5px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 14px; }
+  .footer-col a { display: block; color: var(--gray-dim); font-size: 13.5px; margin-bottom: 10px; }
+  .footer-col a:hover { color: var(--gray); }
+  .footer-bottom { text-align: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 12.5px; }
+
+  @media (max-width: 860px) {
+    .footer-top { grid-template-columns: repeat(2, 1fr); }
+    .workflow-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .footer-top { grid-template-columns: 1fr; }
+    .workflow-grid { grid-template-columns: 1fr; }
+  }
+
+  /* MOBILE MENU */
+  .nav-right { display: flex; align-items: center; gap: 14px; }
+  .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+  .menu-toggle span { width: 24px; height: 2px; background: var(--white); display: block; transition: transform 0.2s ease, opacity 0.2s ease; }
+  .menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-toggle.open span:nth-child(2) { opacity: 0; }
+  .menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu {
+    display: none; flex-direction: column;
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.25s ease;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    background: var(--black);
+  }
+  .mobile-menu.open { max-height: 700px; }
+  .mobile-menu a { padding: 14px 24px; color: var(--gray); font-weight: 600; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .mobile-menu a:hover { color: var(--white); background: var(--charcoal); }
+  .mobile-menu a.mobile-cta { color: var(--red); font-weight: 800; }
+  @media (max-width: 860px) {
+    .menu-toggle { display: flex; }
+    .mobile-menu { display: flex; }
+  }
+
+  /* QUOTE FORM (Tally embed) */
+  .tally-embed-wrap {
+    max-width: 700px; margin: 0 auto;
+    background: var(--white);
+    border-radius: 18px;
+    border: 1px solid rgba(200,32,45,0.3);
+    overflow: hidden;
+    padding: 6px;
+  }
+  .tally-embed-wrap iframe { display: block; width: 100%; border: 0; }
+  .tally-fallback { text-align: center; color: var(--gray-dim); font-size: 13.5px; margin-top: 18px; }
+  .tally-fallback a { color: var(--red); font-weight: 700; }
+  .tally-fallback a:hover { color: var(--white); }
+
+  /* WHATSAPP FAB */
+  .whatsapp-fab {
+    position: fixed; bottom: 24px; right: 24px; z-index: 60;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #25D366; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35); transition: transform 0.2s ease;
+  }
+  .whatsapp-fab:hover { transform: scale(1.08); }
+  .whatsapp-fab svg { width: 28px; height: 28px; }
+  @media (max-width: 560px) {
+    .whatsapp-fab { width: 50px; height: 50px; bottom: 16px; right: 16px; }
+    .whatsapp-fab svg { width: 24px; height: 24px; }
+  }
+
+  /* COOKIE BANNER */
+  .cookie-banner {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 70;
+    background: var(--charcoal-2); border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 16px 24px; transform: translateY(100%); transition: transform 0.3s ease;
+  }
+  .cookie-banner.show { transform: translateY(0); }
+  .cookie-banner-inner { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  .cookie-banner-inner p { color: var(--gray); font-size: 13.5px; margin: 0; }
+  .cookie-banner-inner a { color: var(--white); text-decoration: underline; transition: color 0.2s; }
+  .cookie-banner-inner a:hover { color: var(--red); }
+  .cookie-accept-btn { padding: 10px 22px; font-size: 14px; flex-shrink: 0; border: none; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="GoVidCo">
+    </a>
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a href="index.html#services" class="nav-dropdown-toggle">Services</a>
+        <div class="nav-dropdown-menu">
+          <a href="index.html#svc-shorts">Shorts, Reels &amp; TikTok</a>
+          <a href="index.html#svc-faceless">Faceless Channel System</a>
+          <a href="index.html#svc-podcast">Podcast &amp; Interview Editing</a>
+          <a href="index.html#svc-ads">Ad Creatives</a>
+          <a href="index.html#svc-youtube">YouTube Long-Form Editing</a>
+          <a href="index.html#svc-corporate">Corporate &amp; Brand Video</a>
+        </div>
+      </div>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="index.html#workflow">Workflow</a>
+      <a href="index.html#about">Leadership</a>
+      <a href="join.html">Careers</a>
+    </div>
+    <div class="nav-right">
+      <a href="contact.html" class="nav-cta">Get a Quote</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#services">Services</a>
+    <a href="index.html#svc-shorts">Shorts, Reels &amp; TikTok</a>
+    <a href="index.html#svc-faceless">Faceless Channel System</a>
+    <a href="index.html#svc-podcast">Podcast &amp; Interview Editing</a>
+    <a href="index.html#svc-ads">Ad Creatives</a>
+    <a href="index.html#svc-youtube">YouTube Long-Form Editing</a>
+    <a href="index.html#svc-corporate">Corporate &amp; Brand Video</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="index.html#workflow">Workflow</a>
+    <a href="index.html#about">Leadership</a>
+    <a href="join.html">Careers</a>
+    <a href="contact.html" class="mobile-cta">Get a Quote</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">Get a Quote</div>
+  <h1>Tell Us About Your <span>Project</span></h1>
+  <p>Share your raw footage, timelines, and goals. We'll match you with a dedicated editor and set up a private workspace for your project — usually within 24 hours.</p>
+  <div class="hero-ctas">
+    <a href="https://wa.me/8801797861891?text=Hi%20GoVidCo%2C%20I%27d%20like%20to%20start%20a%20project" class="btn btn-primary" target="_blank" rel="noopener">Message Us on WhatsApp</a>
+    <a href="index.html#services" class="btn btn-secondary">See Our Services</a>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">What Happens Next</span>
+      <h2>From Submission to Delivery</h2>
+      <p>A simple, repeatable process for every project.</p>
+    </div>
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Submit Details</h3>
+        <p>Tell us about your project, channel, and content goals.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>We Review &amp; Match</h3>
+        <p>We assign a project code and match you with the right editor.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Dedicated Workspace</h3>
+        <p>You get a private Drive folder to upload raw footage and receive edits.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <h3>Delivery</h3>
+        <p>Edits typically delivered within 24–48 hours, ready to review.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services-recap" style="padding-top:70px;">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">What We Edit</span>
+      <h2>Six Service Categories</h2>
+    </div>
+    <div class="recap-list">
+      <div class="recap-item">The Viral Engine<span>Shorts, Reels &amp; TikTok</span></div>
+      <div class="recap-item">The Automation Engine<span>Faceless channel systems</span></div>
+      <div class="recap-item">The Authority<span>Podcast &amp; interview edits</span></div>
+      <div class="recap-item">The Converter<span>Ad creatives</span></div>
+      <div class="recap-item">The Flagship<span>YouTube long-form</span></div>
+      <div class="recap-item">The Brand Guardian<span>Corporate &amp; business video</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="quote-form">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Get a Quote</span>
+      <h2>Tell Us About Your Project</h2>
+      <p>Fill out the form below — we'll review it and follow up with a custom quote, usually within 24 hours.</p>
+    </div>
+    <div class="tally-embed-wrap">
+      <iframe data-tally-src="https://tally.so/embed/GxAGpL?alignLeft=1&hideTitle=1&dynamicHeight=1" loading="lazy" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" title="Get a Quote — GoVidCo"></iframe>
+    </div>
+    <p class="tally-fallback">Form not loading? <a href="https://tally.so/r/GxAGpL" target="_blank" rel="noopener" id="tally-fallback-link">Open it in a new tab →</a></p>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="container">
+    <div class="quote-card">
+      <h2>Prefer to Message Us Directly?</h2>
+      <p>Skip the form — message us your project details, footage, and timeline on WhatsApp and we'll get back to you within 24 hours.</p>
+      <a class="btn btn-primary" href="https://wa.me/8801797861891?text=Hi%20GoVidCo%2C%20I%27d%20like%20to%20start%20a%20project" target="_blank" rel="noopener">Message Us on WhatsApp</a>
+      <div>
+        <a class="contact-email" href="mailto:admin@govidco.com">Or email us at admin@govidco.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top container">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="logo.png" alt="GoVidCo">
+      </div>
+      <p>From Vision to Viral.</p>
+      <p style="margin-top:8px;"><a href="https://wa.me/8801797861891" target="_blank" rel="noopener" style="color:var(--gray-dim); display:inline-flex; align-items:center; gap:6px;"><img src="icon-whatsapp.svg" alt="" width="14" height="14">WhatsApp: +880 1797-861891</a></p>
+      <p style="margin-top:8px;"><a href="https://www.linkedin.com/company/go-vidco/" target="_blank" rel="noopener" style="color:var(--gray-dim); display:inline-flex; align-items:center; gap:6px;"><img src="icon-linkedin.png" alt="" width="14" height="14">LinkedIn: GoVidCo</a></p>
+      <p style="margin-top:8px;"><a href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener" style="color:var(--gray-dim); display:inline-flex; align-items:center; gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex:none;" aria-hidden="true"><path d="M23.5 6.2c-.3-1.1-1.1-1.9-2.2-2.2C19.3 3.5 12 3.5 12 3.5s-7.3 0-9.3.5c-1.1.3-1.9 1.1-2.2 2.2C0 8.2 0 12 0 12s0 3.8.5 5.8c.3 1.1 1.1 1.9 2.2 2.2 2 .5 9.3.5 9.3.5s7.3 0 9.3-.5c1.1-.3 1.9-1.1 2.2-2.2.5-2 .5-5.8.5-5.8s0-3.8-.5-5.8zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"/></svg>YouTube: @GoVidCo</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="index.html#about">Leadership</a>
+      <a href="index.html#workflow">Workflow</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+        <a href="index.html#svc-shorts">Shorts, Reels &amp; TikTok</a>
+        <a href="index.html#svc-faceless">Faceless Channel System</a>
+        <a href="index.html#svc-podcast">Podcast &amp; Interview Editing</a>
+        <a href="index.html#svc-ads">Ad Creatives</a>
+        <a href="index.html#svc-youtube">YouTube Long-Form Editing</a>
+        <a href="index.html#svc-corporate">Corporate &amp; Brand Video</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="index.html#faq">FAQ</a>
+      <a href="join.html">Careers</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 GoVidCo. All rights reserved. &middot; govidco.com</div>
+  </div>
+</footer>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  (function(){
+    var btn = document.getElementById('menuToggle');
+    var menu = document.getElementById('mobileMenu');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', function(){
+      var isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
+
+<a href="https://wa.me/8801797861891?text=Hi%20GoVidCo%2C%20I%27d%20like%20to%20discuss%20a%20video%20editing%20project" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Chat with GoVidCo on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M16.001 3C9.096 3 3.5 8.596 3.5 15.5c0 2.36.656 4.566 1.796 6.45L3 29l7.24-2.257A12.44 12.44 0 0 0 16.001 28C22.906 28 28.5 22.404 28.5 15.5S22.906 3 16.001 3zm0 22.7c-2.02 0-3.905-.59-5.49-1.606l-.394-.25-4.3 1.34 1.37-4.19-.257-.406a10.19 10.19 0 0 1-1.63-5.588c0-5.635 4.585-10.22 10.22-10.22 5.635 0 10.22 4.585 10.22 10.22 0 5.635-4.585 10.22-10.22 10.22zm5.6-7.66c-.307-.154-1.815-.896-2.096-.998-.28-.103-.485-.154-.69.153-.204.307-.79.998-.968 1.203-.178.205-.357.23-.663.077-.307-.154-1.296-.478-2.469-1.524-.913-.814-1.53-1.82-1.708-2.127-.178-.307-.019-.473.135-.626.138-.138.307-.358.46-.537.154-.18.205-.307.307-.512.102-.204.05-.384-.026-.537-.077-.154-.69-1.662-.945-2.276-.249-.598-.502-.517-.69-.527l-.588-.01c-.204 0-.537.077-.818.384-.28.307-1.07 1.045-1.07 2.55 0 1.505 1.096 2.96 1.25 3.164.153.205 2.157 3.293 5.227 4.618.73.315 1.3.503 1.744.644.733.233 1.4.2 1.927.121.588-.088 1.815-.742 2.07-1.459.256-.716.256-1.33.18-1.459-.077-.128-.282-.205-.588-.358z"/></svg>
+</a>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-inner">
+    <p>We use cookies to improve your experience and analyze site traffic. By continuing, you agree to our <a href="privacy.html#cookies">Cookie Policy</a>.</p>
+    <button id="cookieAccept" class="btn btn-primary cookie-accept-btn">Accept</button>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var banner = document.getElementById('cookieBanner');
+    var btn = document.getElementById('cookieAccept');
+    if (!banner || !btn) return;
+    if (!localStorage.getItem('govidco_cookie_consent')) {
+      setTimeout(function(){ banner.classList.add('show'); }, 700);
+    }
+    btn.addEventListener('click', function(){
+      localStorage.setItem('govidco_cookie_consent', '1');
+      banner.classList.remove('show');
+    });
+  })();
+</script>
+
+<script>
+  (function(){
+    // Get a Quote form (Tally) — forward campaign/source tracking params from the
+    // page URL into the embedded form's hidden fields before it loads, so every
+    // submission records where the lead came from (utm_source/medium/campaign),
+    // plus a fixed page_source value identifying this page.
+    var iframe = document.querySelector('iframe[data-tally-src]');
+    var fallbackLink = document.getElementById('tally-fallback-link');
+    if (iframe) {
+      var baseSrc = iframe.getAttribute('data-tally-src');
+      var params = new URLSearchParams(window.location.search);
+      var extra = new URLSearchParams();
+      ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function(key){
+        if (params.get(key)) extra.set(key, params.get(key));
+      });
+      extra.set('page_source', 'contact_page');
+      var finalSrc = baseSrc + '&' + extra.toString();
+      iframe.setAttribute('data-tally-src', finalSrc);
+      // Set the src directly rather than depending on Tally's own lazy-loader
+      // (Tally.loadEmbeds() / its IntersectionObserver) to attach it — that
+      // did not reliably fire on this page in live testing, leaving the form
+      // blank for visitors. Setting it ourselves guarantees the form appears.
+      iframe.setAttribute('src', finalSrc);
+      if (fallbackLink) {
+        var fallbackUrl = new URL(fallbackLink.href);
+        extra.forEach(function(value, key){ fallbackUrl.searchParams.set(key, value); });
+        fallbackLink.href = fallbackUrl.toString();
+      }
+    }
+    // Still load Tally's widget script, purely so it can auto-resize the
+    // iframe height via postMessage once the form content has rendered.
+    var d = document, w = 'https://tally.so/widgets/embed.js';
+    if (d.querySelector('script[src="' + w + '"]') == null) {
+      var s = d.createElement('script');
+      s.src = w;
+      d.body.appendChild(s);
+    }
+  })();
+</script>
+
+<!-- Cloudflare Web Analytics is active for govidco.com via Cloudflare's automatic edge injection
+     (dashboard: Analytics & Logs -> Web Analytics -> govidco.com -> RUM = "Enable, excluding visitor
+     data in the EU"). Cloudflare injects the beacon into every response at the edge, so no manual
+     script tag is needed here -- confirmed live in the dashboard on 2026-08-26. -->
+</body>
+</html>
