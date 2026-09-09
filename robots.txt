@@ -59,7 +59,4 @@ Disallow: /
 
 # END Cloudflare Managed Content
 
-User-agent: *
-Allow: /
-
 Sitemap: https://www.govidco.com/sitemap.xml

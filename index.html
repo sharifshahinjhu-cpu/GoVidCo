@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GoVidCo — From Vision to Viral</title>
-<meta name="description" content="GoVidCo is a video editing agency turning long-form content into scroll-stopping Shorts, Reels, TikToks, podcasts, ads, and corporate video.">
+<meta name="description" content="GoVidCo is a video editing agency turning long-form content into scroll-stopping Shorts and Reels, plus full-length YouTube edits — other formats on request.">
 <link rel="canonical" href="https://www.govidco.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.govidco.com/">
 <meta property="og:title" content="GoVidCo — From Vision to Viral">
-<meta property="og:description" content="GoVidCo is a video editing agency turning long-form content into scroll-stopping Shorts, Reels, TikToks, podcasts, ads, and corporate video.">
+<meta property="og:description" content="GoVidCo is a video editing agency turning long-form content into scroll-stopping Shorts and Reels, plus full-length YouTube edits — other formats on request.">
 <meta property="og:image" content="https://www.govidco.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GoVidCo — From Vision to Viral">
-<meta name="twitter:description" content="GoVidCo is a video editing agency turning long-form content into scroll-stopping Shorts, Reels, TikToks, podcasts, ads, and corporate video.">
+<meta name="twitter:description" content="GoVidCo is a video editing agency turning long-form content into scroll-stopping Shorts and Reels, plus full-length YouTube edits — other formats on request.">
 <meta name="twitter:image" content="https://www.govidco.com/og-image.png">
 <link rel="icon" type="image/png" href="favicon.png">
 <script type="application/ld+json">
@@ -25,7 +25,7 @@
   "url": "https://www.govidco.com/",
   "logo": "https://www.govidco.com/logo.png",
   "image": "https://www.govidco.com/og-image.png",
-  "description": "GoVidCo is a video editing agency turning long-form content into scroll-stopping Shorts, Reels, TikToks, podcasts, ads, and corporate video.",
+  "description": "GoVidCo is a video editing agency turning long-form content into scroll-stopping Shorts and Reels, plus full-length YouTube edits — other formats on request.",
   "email": "admin@govidco.com",
   "founder": { "@type": "Person", "name": "Md. Shariful Islam", "jobTitle": "Founder" },
   "areaServed": "Worldwide",
@@ -45,7 +45,7 @@
     --red-dark: #A11B26;
     --white: #FFFFFF;
     --gray: #A8ADB5;
-    --gray-dim: #6E7280;
+    --gray-dim: #8C919B;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -195,11 +195,6 @@
   .stat-box .num { font-size: 28px; font-weight: 800; color: var(--red); }
   .stat-box .label { font-size: 12.5px; color: var(--gray); margin-top: 4px; }
 
-  /* LEADERSHIP (CEO) — mirrors About, photo on the right */
-  .about-grid-rev { grid-template-columns: 1.15fr 0.85fr; }
-  .ceo-photo-box img { aspect-ratio: 723 / 817; object-fit: contain; object-position: top center; background: var(--black); }
-  #leadership { border-top: 1px solid rgba(255,255,255,0.06); }
-
   /* FAQ */
   .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
   .faq-item {
@@ -265,6 +260,7 @@
     box-shadow: 0 14px 30px rgba(0,0,0,0.45);
   }
   .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu,
   .nav-dropdown-menu:hover {
     opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
   }
@@ -355,6 +351,80 @@
   .cookie-banner-inner a { color: var(--white); text-decoration: underline; transition: color 0.2s; }
   .cookie-banner-inner a:hover { color: var(--red); }
   .cookie-accept-btn { padding: 10px 22px; font-size: 14px; flex-shrink: 0; border: none; cursor: pointer; }
+
+  /* WHY THIS WORKS */
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .why-card {
+    background: var(--charcoal); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px; padding: 28px 26px;
+    border-top: 2px solid var(--red);
+  }
+  .why-card h3 { font-size: 17.5px; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.01em; }
+  .why-card p { color: var(--gray); font-size: 14.5px; margin: 0; }
+  .why-live {
+    text-align: center; color: var(--white); font-size: 16px;
+    max-width: 720px; margin: 30px auto 0;
+    background: rgba(200,32,45,0.08); border: 1px solid rgba(200,32,45,0.35);
+    border-radius: 12px; padding: 18px 24px;
+  }
+  .why-live strong { color: var(--white); font-weight: 800; }
+  .why-footnote { text-align: center; color: var(--gray-dim); font-size: 13.5px; margin-top: 20px; }
+  .why-footnote a { color: var(--gray); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+  .why-footnote a:hover { color: var(--white); }
+  @media (max-width: 860px) { .why-grid { grid-template-columns: 1fr; } }
+
+  /* PRICING */
+  .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
+  .price-card {
+    background: var(--black); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px; padding: 28px 26px; position: relative;
+    display: flex; flex-direction: column;
+  }
+  .price-card-featured { border-color: var(--red); background: linear-gradient(160deg, var(--charcoal-2), var(--black)); }
+  .price-badge {
+    position: absolute; top: -11px; left: 26px;
+    background: var(--red); color: var(--white);
+    font-size: 11.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 999px;
+  }
+  .price-card h3 { font-size: 18px; font-weight: 800; margin-bottom: 20px; letter-spacing: -0.01em; }
+  .price-rows { display: flex; flex-direction: column; gap: 16px; }
+  .price-row { display: flex; flex-direction: column; gap: 4px; }
+  .price-row span { color: var(--gray); font-size: 14px; }
+  .price-row strong { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; }
+  .price-row strong em { font-style: normal; font-size: 13.5px; font-weight: 600; color: var(--gray); }
+  .price-incl { color: var(--gray); font-size: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .price-notes {
+    list-style: none; display: flex; flex-direction: column; gap: 10px;
+    max-width: 720px; margin: 34px auto 0; color: var(--gray); font-size: 14px;
+  }
+  .price-notes li { padding-left: 20px; position: relative; }
+  .price-notes li::before { content: "—"; position: absolute; left: 0; color: var(--red); font-weight: 800; }
+  @media (max-width: 860px) { .price-grid { grid-template-columns: 1fr; } }
+
+  /* TWO-SERVICE LAYOUT */
+  .services-grid.duo { grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto; }
+  .svc-other {
+    max-width: 900px; margin: 26px auto 0;
+    background: var(--charcoal); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px; padding: 24px 26px;
+  }
+  .svc-other h3 { font-size: 16.5px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.01em; }
+  .svc-other p { color: var(--gray); font-size: 14.5px; margin: 0; }
+  .svc-other a { color: var(--red); font-weight: 700; }
+  .svc-other a:hover { color: var(--white); }
+  @media (max-width: 720px) { .services-grid.duo { grid-template-columns: 1fr; } }
+/* HEADER FIT: three nav children over-subscribe the row once a 6th link is added,
+     which collapses space-between gaps to 0 and wraps the CTA. Give nav a real gap,
+     stop the CTA wrapping, and switch to the mobile menu while the row still fits. */
+  nav { gap: 24px; }
+  .nav-links { gap: 26px; }
+  .nav-cta { white-space: nowrap; flex: none; }
+  @media (max-width: 1080px) {
+    .nav-links { display: none; }
+    .menu-toggle { display: flex; }
+    .mobile-menu { display: flex; }
+  }
 </style>
 </head>
 <body>
@@ -369,14 +439,12 @@
         <a href="#services" class="nav-dropdown-toggle">Services</a>
         <div class="nav-dropdown-menu">
           <a href="#svc-shorts">Shorts, Reels &amp; TikTok</a>
-          <a href="#svc-faceless">Faceless Channel System</a>
-          <a href="#svc-podcast">Podcast &amp; Interview Editing</a>
-          <a href="#svc-ads">Ad Creatives</a>
           <a href="#svc-youtube">YouTube Long-Form Editing</a>
-          <a href="#svc-corporate">Corporate &amp; Brand Video</a>
+          <a href="#svc-other">Other Formats, On Request</a>
         </div>
       </div>
       <a href="portfolio.html">Portfolio</a>
+      <a href="#pricing">Pricing</a>
       <a href="#workflow">Workflow</a>
       <a href="#about">Leadership</a>
       <a href="join.html">Careers</a>
@@ -391,12 +459,10 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#services">Services</a>
     <a href="#svc-shorts">Shorts, Reels &amp; TikTok</a>
-    <a href="#svc-faceless">Faceless Channel System</a>
-    <a href="#svc-podcast">Podcast &amp; Interview Editing</a>
-    <a href="#svc-ads">Ad Creatives</a>
     <a href="#svc-youtube">YouTube Long-Form Editing</a>
-    <a href="#svc-corporate">Corporate &amp; Brand Video</a>
+    <a href="#svc-other">Other Formats, On Request</a>
     <a href="portfolio.html">Portfolio</a>
+    <a href="#pricing">Pricing</a>
     <a href="#workflow">Workflow</a>
     <a href="#about">Leadership</a>
     <a href="join.html">Careers</a>
@@ -407,7 +473,7 @@
 <section class="hero">
   <div class="eyebrow">Video Editing Agency</div>
   <h1>Turn Long-Form Content Into <span>Scroll-Stopping Shorts</span></h1>
-  <p>GoVidCo pairs senior editing talent with a proven repurposing system to turn your raw footage into high-performing Shorts, Reels, TikToks, podcasts, ads, and corporate video — without the in-house overhead.</p>
+  <p>A vetted team of editors in Bangladesh, with every delivery reviewed by our founder before it reaches you. Senior-level editing at a fraction of a US agency rate — and no in-house overhead.</p>
   <div class="hero-ctas">
     <a href="contact.html" class="btn btn-primary">Get a Quote</a>
     <a href="#portfolio" class="btn btn-secondary">See Our Work</a>
@@ -425,14 +491,40 @@
   </div>
 </div>
 
-<section id="services">
+<section id="how-it-works">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Why This Works</span>
+      <h2>How We Deliver at This Price</h2>
+      <p>No mystery, no middlemen. Here is the actual structure behind every edit you receive.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>One person approves everything</h3>
+        <p>Md. Shariful Islam reviews every delivery against your brief before it leaves the studio. If an edit misses, it goes back to the editor — not to you. That single gate is why quality does not drift as we take on more work.</p>
+      </div>
+      <div class="why-card">
+        <h3>A vetted team, not a marketplace</h3>
+        <p>Between five and ten editors we have personally tested and trained, working to one written standard. You keep the same editor across your projects, so they learn your channel instead of relearning it every month.</p>
+      </div>
+      <div class="why-card">
+        <h3>Based in Bangladesh, working your hours</h3>
+        <p>This is why senior editing costs a fraction of a US or UK agency — lower cost of living, not lower standards. Our working hours overlap US, UK and Australian business days, so your notes get picked up the same day.</p>
+      </div>
+    </div>
+    <p class="why-live">Right now we run editing for <strong>three trend-based channels belonging to one long-term client — a combined 150,000+ subscribers</strong>. Ongoing retainers, not one-off projects.</p>
+    <p class="why-footnote">Every claim above is checkable: <a href="https://www.upwork.com/freelancers/~01e389eef945cdf1aa" target="_blank" rel="noopener">5.00 rating across completed Upwork contracts</a> &middot; <a href="portfolio.html#testimonials">unedited client reviews</a> &middot; <a href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener">sample edits on YouTube</a></p>
+  </div>
+</section>
+
+<section id="services" style="padding-top:0;">
   <div class="container">
     <div class="section-head">
       <span class="section-tag">What We Do</span>
-      <h2>Six Ways We Turn Footage Into Results</h2>
-      <p>Every category is backed by a live sample playlist — see real edits before you commit.</p>
+      <h2>Two Services, Run as Systems</h2>
+      <p>Both are productized: fixed turnaround, fixed pricing, and every edit reviewed by our founder before it reaches you. Sample edits are on our YouTube channel.</p>
     </div>
-    <div class="services-grid">
+    <div class="services-grid duo">
 
       <div class="service-card flagship" id="svc-shorts">
         <div class="service-thumb-wrap">
@@ -442,43 +534,6 @@
         <div class="service-card-body">
           <h3>The Viral Engine</h3>
           <p>Shorts, Reels &amp; TikTok — high-retention vertical cuts pulled from your long-form content, edited to hook viewers in the first second and hold them to the end.</p>
-          <!-- TODO(Shariful): replace with real per-service YouTube playlist link -->
-          <a class="service-link" href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener">View Samples →</a>
-        </div>
-      </div>
-
-      <div class="service-card" id="svc-faceless">
-        <div class="service-thumb-wrap">
-          <img class="service-thumb" src="thumb-automation-engine.jpg" alt="Faceless channel automated video production">
-        </div>
-        <div class="service-card-body">
-          <h3>The Automation Engine</h3>
-          <p>Cash-cow faceless channels — fully systemized, faceless video production built for consistency and scale.</p>
-          <!-- TODO(Shariful): replace with real per-service YouTube playlist link -->
-          <a class="service-link" href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener">View Samples →</a>
-        </div>
-      </div>
-
-      <div class="service-card" id="svc-podcast">
-        <div class="service-thumb-wrap">
-          <img class="service-thumb" src="thumb-authority.jpg" alt="Podcast and interview editing">
-        </div>
-        <div class="service-card-body">
-          <h3>The Authority</h3>
-          <p>Podcast &amp; interview edits — polished, professional cuts that build credibility and extend your reach.</p>
-          <!-- TODO(Shariful): replace with real per-service YouTube playlist link -->
-          <a class="service-link" href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener">View Samples →</a>
-        </div>
-      </div>
-
-      <div class="service-card" id="svc-ads">
-        <div class="service-thumb-wrap">
-          <img class="service-thumb" src="thumb-converter.jpg" alt="Ad creative editing">
-        </div>
-        <div class="service-card-body">
-          <h3>The Converter</h3>
-          <p>Ad creatives — scroll-stopping, conversion-engineered edits built to perform in paid campaigns.</p>
-          <!-- TODO(Shariful): replace with real per-service YouTube playlist link -->
           <a class="service-link" href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener">View Samples →</a>
         </div>
       </div>
@@ -490,23 +545,68 @@
         <div class="service-card-body">
           <h3>The Flagship</h3>
           <p>YouTube long-form — full-length edits paced to keep viewers watching and boost watch-time.</p>
-          <!-- TODO(Shariful): replace with real per-service YouTube playlist link -->
           <a class="service-link" href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener">View Samples →</a>
         </div>
       </div>
 
-      <div class="service-card" id="svc-corporate">
-        <div class="service-thumb-wrap">
-          <img class="service-thumb" src="thumb-brand-guardian.jpg" alt="Corporate and brand video editing">
-        </div>
-        <div class="service-card-body">
-          <h3>The Brand Guardian</h3>
-          <p>Corporate &amp; business video — clean, on-brand editing for internal, marketing, and executive content.</p>
-          <!-- TODO(Shariful): replace with real per-service YouTube playlist link -->
-          <a class="service-link" href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener">View Samples →</a>
+    </div>
+    <div class="svc-other" id="svc-other">
+      <h3>Other formats, on request</h3>
+      <p>Ad creatives, podcast and interview edits, faceless channel systems, and corporate video are quoted case by case. We take them on when the brief fits our editors' strengths — <a href="contact.html#quote-form">tell us what you need</a> and we'll give you a straight yes or no.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" style="background: var(--charcoal); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Pricing</span>
+      <h2>What It Costs to Start</h2>
+      <p>Starting prices, not a menu. Your final quote depends on footage length, clip count, and turnaround — you get it in writing before anything begins.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Shorts, Reels &amp; TikTok</h3>
+        <div class="price-rows">
+          <div class="price-row">
+            <span>Cut from your existing long-form</span>
+            <strong>from $65 <em>/ clip</em></strong>
+          </div>
+          <div class="price-row">
+            <span>Original edit, custom graphics and captions</span>
+            <strong>from $110 <em>/ clip</em></strong>
+          </div>
         </div>
       </div>
-
+      <div class="price-card">
+        <h3>YouTube Long-Form</h3>
+        <div class="price-rows">
+          <div class="price-row">
+            <span>Full-length edit, retention-paced</span>
+            <strong>from $275 <em>/ video</em></strong>
+          </div>
+          <div class="price-incl">Includes colour, sound, titles and thumbnail-ready stills.</div>
+        </div>
+      </div>
+      <div class="price-card price-card-featured">
+        <div class="price-badge">Best value</div>
+        <h3>Monthly Retainer</h3>
+        <div class="price-rows">
+          <div class="price-row">
+            <span>4 long-form videos + 12 Shorts</span>
+            <strong>from $1,200 <em>/ month</em></strong>
+          </div>
+          <div class="price-incl">Same editor every month, priority queue, and a standing slot in the schedule.</div>
+        </div>
+      </div>
+    </div>
+    <ul class="price-notes">
+      <li>Two revision rounds included on every edit.</li>
+      <li>Rush delivery is quoted separately — we will tell you the surcharge before you commit.</li>
+      <li>Formats outside our two core services are quoted case by case.</li>
+    </ul>
+    <div style="text-align:center; margin-top:36px;">
+      <a href="contact.html#quote-form" class="btn btn-primary">Get a Written Quote</a>
     </div>
   </div>
 </section>
@@ -516,7 +616,7 @@
     <div class="section-head">
       <span class="section-tag">Portfolio</span>
       <h2>See the Work</h2>
-      <p>Sample edits across all six categories, plus real client reviews from Upwork — 5.00 average rating.</p>
+      <p>Sample edits from both core services, plus real client reviews from Upwork — 5.00 average rating.</p>
     </div>
     <div style="text-align:center; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
       <a class="btn btn-primary" href="portfolio.html">View Portfolio &amp; Reviews</a>
@@ -565,10 +665,11 @@
     <div>
       <span class="section-tag">About GoVidCo</span>
       <h2>Global Talent. Global Clients. One Standard.</h2>
-      <p>GoVidCo was built on a simple idea: the best clients and the best editors don't have to be in the same place. We work with founders, creators, and brands worldwide, backed by a vetted team of senior editors — so every project gets premium craft without premium overhead.</p>
-      <p>Founded by Md. Shariful Islam, GoVidCo started in freelance video editing and is now building toward a full-service agency model across six content categories. <a href="https://www.linkedin.com/in/sharif-govidco" target="_blank" rel="noopener" style="color:var(--red); font-weight:700;">Connect on LinkedIn →</a> &nbsp;|&nbsp; <a href="https://sharifulcuts.com" target="_blank" rel="noopener" style="color:var(--red); font-weight:700;">sharifulcuts.com →</a></p>
+      <p>GoVidCo was built on a simple idea: the best clients and the best editors don't have to be in the same place. We have worked with founders, creators, and brands worldwide, backed by a vetted team of senior editors — so every project gets premium craft without premium overhead.</p>
+      <p>Founded by Md. Shariful Islam, GoVidCo started in freelance video editing and now runs two productized editing services with a vetted team behind each. <a href="https://www.linkedin.com/in/sharif-govidco" target="_blank" rel="noopener" style="color:var(--red); font-weight:700;">Connect on LinkedIn →</a> &nbsp;|&nbsp; <a href="https://www.upwork.com/freelancers/~01e389eef945cdf1aa" target="_blank" rel="noopener" style="color:var(--red); font-weight:700;">5.00 rated on Upwork →</a> &nbsp;|&nbsp; <a href="https://www.upwork.com/agencies/1938718874890686680/" target="_blank" rel="noopener" style="color:var(--red); font-weight:700;">GoVidCo agency on Upwork →</a></p>
+      <p style="margin-top:14px;">More on his own work and background at <a href="https://sharifulcuts.com" target="_blank" rel="noopener" style="color:var(--red); font-weight:700;">sharifulcuts.com</a>.</p>
       <div class="stat-row">
-        <div class="stat-box"><div class="num">6</div><div class="label">Service Categories</div></div>
+        <div class="stat-box"><div class="num">2</div><div class="label">Core Services</div></div>
         <div class="stat-box"><div class="num">30+</div><div class="label">Sample Edits</div></div>
         <div class="stat-box"><div class="num">24–48h</div><div class="label">Typical Turnaround</div></div>
       </div>
@@ -600,7 +701,7 @@
       </details>
       <details class="faq-item">
         <summary>How is pricing determined?</summary>
-        <div class="faq-answer">Pricing depends on video length, complexity, and volume, and is confirmed with you in writing before work begins. Get in touch with your project details and we'll send over a quote.</div>
+        <div class="faq-answer">Pricing depends on video length, complexity, and volume, and is confirmed with you in writing before work begins. Our starting prices — $65 per Short, $275 per long-form video, $1,200/month on a retainer — are <a href="#pricing" style="color:var(--red); font-weight:700;">listed here</a>. Get in touch with your project details and we'll send over a quote.</div>
       </details>
       <details class="faq-item">
         <summary>Who will be editing my content?</summary>
@@ -639,23 +740,23 @@
       <p>From Vision to Viral.</p>
       <p style="margin-top:8px;"><a href="https://wa.me/8801797861891" target="_blank" rel="noopener" style="color:var(--gray-dim); display:inline-flex; align-items:center; gap:6px;"><img src="icon-whatsapp.svg" alt="" width="14" height="14">WhatsApp: +880 1797-861891</a></p>
       <p style="margin-top:8px;"><a href="https://www.linkedin.com/company/go-vidco/" target="_blank" rel="noopener" style="color:var(--gray-dim); display:inline-flex; align-items:center; gap:6px;"><img src="icon-linkedin.png" alt="" width="14" height="14">LinkedIn: GoVidCo</a></p>
+      <p style="margin-top:8px;"><a href="https://www.upwork.com/agencies/1938718874890686680/" target="_blank" rel="noopener" style="color:var(--gray-dim); display:inline-flex; align-items:center; gap:6px;"><img src="icon-upwork.png" alt="" width="14" height="14">Upwork: GoVidCo Agency</a></p>
       <p style="margin-top:8px;"><a href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener" style="color:var(--gray-dim); display:inline-flex; align-items:center; gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex:none;" aria-hidden="true"><path d="M23.5 6.2c-.3-1.1-1.1-1.9-2.2-2.2C19.3 3.5 12 3.5 12 3.5s-7.3 0-9.3.5c-1.1.3-1.9 1.1-2.2 2.2C0 8.2 0 12 0 12s0 3.8.5 5.8c.3 1.1 1.1 1.9 2.2 2.2 2 .5 9.3.5 9.3.5s7.3 0 9.3-.5c1.1-.3 1.9-1.1 2.2-2.2.5-2 .5-5.8.5-5.8s0-3.8-.5-5.8zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"/></svg>YouTube: @GoVidCo</a></p>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
       <a href="#about">Leadership</a>
+      <a href="#pricing">Pricing</a>
       <a href="#workflow">Workflow</a>
       <a href="portfolio.html">Portfolio</a>
+      <a href="case-study.html">Case Study</a>
       <a href="contact.html">Contact</a>
     </div>
     <div class="footer-col">
       <h4>Services</h4>
         <a href="#svc-shorts">Shorts, Reels &amp; TikTok</a>
-        <a href="#svc-faceless">Faceless Channel System</a>
-        <a href="#svc-podcast">Podcast &amp; Interview Editing</a>
-        <a href="#svc-ads">Ad Creatives</a>
         <a href="#svc-youtube">YouTube Long-Form Editing</a>
-        <a href="#svc-corporate">Corporate &amp; Brand Video</a>
+        <a href="#svc-other">Other Formats, On Request</a>
     </div>
     <div class="footer-col">
       <h4>Resources</h4>
@@ -674,7 +775,7 @@
 </footer>
 
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   (function(){
     var btn = document.getElementById('menuToggle');
     var menu = document.getElementById('mobileMenu');

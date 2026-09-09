@@ -25,7 +25,7 @@
     --red-dark: #A11B26;
     --white: #FFFFFF;
     --gray: #A8ADB5;
-    --gray-dim: #6E7280;
+    --gray-dim: #8C919B;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -129,8 +129,8 @@
   .sample-thumb { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; transition: transform 0.3s; }
   .sample-card:hover .sample-thumb { transform: scale(1.04); }
   .sample-embed {
-    position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden;
-    background: var(--black); cursor: pointer;
+    display: block; position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden;
+    background: var(--black); cursor: pointer; text-decoration: none;
   }
   .sample-embed .sample-thumb { position: absolute; inset: 0; height: 100%; }
   .sample-embed .play-btn {
@@ -141,8 +141,6 @@
   }
   .sample-embed:hover .play-btn { transform: translate(-50%, -50%) scale(1.08); background: var(--red); }
   .sample-embed .play-btn svg { width: 22px; height: 22px; margin-left: 3px; fill: var(--white); }
-  .sample-embed.loaded .play-btn, .sample-embed.loaded .sample-thumb { display: none; }
-  .sample-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
   .sample-card-body { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; }
   .sample-num { color: var(--red); font-weight: 800; font-size: 13px; margin-bottom: 12px; }
   .sample-card h3 { font-size: 19px; font-weight: 800; margin-bottom: 10px; letter-spacing: -0.01em; }
@@ -158,6 +156,27 @@
   .stat-box .num { font-size: 28px; font-weight: 800; color: var(--red); }
   .stat-box .label { font-size: 12.5px; color: var(--gray); margin-top: 4px; }
 
+  .testimonial-featured {
+    background: var(--black);
+    border: 1px solid rgba(200,32,45,0.45);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+  .testimonial-featured .meta .stars { color: #F5B942; font-size: 15px; letter-spacing: 2px; margin-bottom: 10px; }
+  .testimonial-featured .meta h3 { font-size: 16px; font-weight: 800; letter-spacing: -0.005em; margin-bottom: 6px; }
+  .testimonial-featured .meta .dates { color: var(--gray-dim); font-size: 12.5px; line-height: 1.6; }
+  .testimonial-featured .quote-body { color: var(--gray); font-size: 15.5px; line-height: 1.75; }
+  .testimonial-featured .quote-body::before { content: "\201C"; color: var(--red); font-weight: 800; }
+  .testimonial-featured .quote-body::after { content: "\201D"; color: var(--red); font-weight: 800; }
+  @media (max-width: 700px) {
+    .testimonial-featured { grid-template-columns: 1fr; gap: 18px; padding: 24px 20px; }
+  }
+
   .testimonial-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
   }
@@ -170,8 +189,6 @@
     transition: border-color 0.2s, transform 0.2s;
   }
   .testimonial-card:hover { border-color: rgba(200,32,45,0.5); transform: translateY(-3px); }
-  .testimonial-card .review-shot { background:#fff; border-radius:10px; padding:12px; height:130px; display:flex; align-items:center; justify-content:center; overflow:hidden; margin-bottom:16px; }
-  .testimonial-card .review-shot img { max-width:100%; max-height:100%; object-fit:contain; }
   .testimonial-card .stars { color: #F5B942; font-size: 14px; margin-bottom: 10px; letter-spacing: 2px; }
   .testimonial-card h3 { font-size: 15.5px; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.005em; }
   .testimonial-card .dates { color: var(--gray-dim); font-size: 12px; margin-bottom: 14px; }
@@ -195,13 +212,55 @@
 
   @media (max-width: 860px) {
     .samples-grid { grid-template-columns: repeat(2, 1fr); }
-    .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonial-featured {
+    background: var(--black);
+    border: 1px solid rgba(200,32,45,0.45);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+  .testimonial-featured .meta .stars { color: #F5B942; font-size: 15px; letter-spacing: 2px; margin-bottom: 10px; }
+  .testimonial-featured .meta h3 { font-size: 16px; font-weight: 800; letter-spacing: -0.005em; margin-bottom: 6px; }
+  .testimonial-featured .meta .dates { color: var(--gray-dim); font-size: 12.5px; line-height: 1.6; }
+  .testimonial-featured .quote-body { color: var(--gray); font-size: 15.5px; line-height: 1.75; }
+  .testimonial-featured .quote-body::before { content: "\201C"; color: var(--red); font-weight: 800; }
+  .testimonial-featured .quote-body::after { content: "\201D"; color: var(--red); font-weight: 800; }
+  @media (max-width: 700px) {
+    .testimonial-featured { grid-template-columns: 1fr; gap: 18px; padding: 24px 20px; }
+  }
+
+  .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
     .stat-row { grid-template-columns: 1fr; max-width: 320px; }
     .nav-links { display: none; }
   }
   @media (max-width: 560px) {
     .samples-grid { grid-template-columns: 1fr; }
-    .testimonial-grid { grid-template-columns: 1fr; }
+    .testimonial-featured {
+    background: var(--black);
+    border: 1px solid rgba(200,32,45,0.45);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+  .testimonial-featured .meta .stars { color: #F5B942; font-size: 15px; letter-spacing: 2px; margin-bottom: 10px; }
+  .testimonial-featured .meta h3 { font-size: 16px; font-weight: 800; letter-spacing: -0.005em; margin-bottom: 6px; }
+  .testimonial-featured .meta .dates { color: var(--gray-dim); font-size: 12.5px; line-height: 1.6; }
+  .testimonial-featured .quote-body { color: var(--gray); font-size: 15.5px; line-height: 1.75; }
+  .testimonial-featured .quote-body::before { content: "\201C"; color: var(--red); font-weight: 800; }
+  .testimonial-featured .quote-body::after { content: "\201D"; color: var(--red); font-weight: 800; }
+  @media (max-width: 700px) {
+    .testimonial-featured { grid-template-columns: 1fr; gap: 18px; padding: 24px 20px; }
+  }
+
+  .testimonial-grid { grid-template-columns: 1fr; }
     section { padding: 64px 0; }
     .hero { padding: 72px 20px 56px; }
   }
@@ -217,6 +276,7 @@
     box-shadow: 0 14px 30px rgba(0,0,0,0.45);
   }
   .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu,
   .nav-dropdown-menu:hover {
     opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
   }
@@ -305,6 +365,35 @@
   .cookie-banner-inner a { color: var(--white); text-decoration: underline; transition: color 0.2s; }
   .cookie-banner-inner a:hover { color: var(--red); }
   .cookie-accept-btn { padding: 10px 22px; font-size: 14px; flex-shrink: 0; border: none; cursor: pointer; }
+
+  /* PAST WORK IN OTHER FORMATS (subordinate to core services) */
+  .other-work { max-width: 900px; margin: 48px auto 0; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .other-work-head { font-size: 16.5px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.01em; }
+  .other-work-note { color: var(--gray); font-size: 14px; margin-bottom: 24px; max-width: 620px; }
+  .other-work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .other-work-card {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--charcoal); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px; padding: 12px 14px; transition: border-color 0.2s;
+  }
+  .other-work-card:hover { border-color: rgba(200,32,45,0.5); }
+  .other-work-card img { width: 72px; height: 54px; object-fit: cover; border-radius: 6px; flex: none; }
+  .other-work-card h3 { font-size: 14.5px; font-weight: 800; margin-bottom: 3px; }
+  .other-work-card p { color: var(--gray-dim); font-size: 12.5px; line-height: 1.45; margin: 0; }
+  .samples-grid.duo { grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto; }
+  @media (max-width: 720px) { .other-work-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .samples-grid.duo { grid-template-columns: 1fr; } }
+/* HEADER FIT: three nav children over-subscribe the row once a 6th link is added,
+     which collapses space-between gaps to 0 and wraps the CTA. Give nav a real gap,
+     stop the CTA wrapping, and switch to the mobile menu while the row still fits. */
+  nav { gap: 24px; }
+  .nav-links { gap: 26px; }
+  .nav-cta { white-space: nowrap; flex: none; }
+  @media (max-width: 1080px) {
+    .nav-links { display: none; }
+    .menu-toggle { display: flex; }
+    .mobile-menu { display: flex; }
+  }
 </style>
 </head>
 <body>
@@ -319,14 +408,12 @@
         <a href="index.html#services" class="nav-dropdown-toggle">Services</a>
         <div class="nav-dropdown-menu">
           <a href="index.html#svc-shorts">Shorts, Reels &amp; TikTok</a>
-          <a href="index.html#svc-faceless">Faceless Channel System</a>
-          <a href="index.html#svc-podcast">Podcast &amp; Interview Editing</a>
-          <a href="index.html#svc-ads">Ad Creatives</a>
           <a href="index.html#svc-youtube">YouTube Long-Form Editing</a>
-          <a href="index.html#svc-corporate">Corporate &amp; Brand Video</a>
+          <a href="index.html#svc-other">Other Formats, On Request</a>
         </div>
       </div>
       <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="index.html#pricing">Pricing</a>
       <a href="index.html#workflow">Workflow</a>
       <a href="index.html#about">Leadership</a>
       <a href="join.html">Careers</a>
@@ -341,12 +428,10 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html#services">Services</a>
     <a href="index.html#svc-shorts">Shorts, Reels &amp; TikTok</a>
-    <a href="index.html#svc-faceless">Faceless Channel System</a>
-    <a href="index.html#svc-podcast">Podcast &amp; Interview Editing</a>
-    <a href="index.html#svc-ads">Ad Creatives</a>
     <a href="index.html#svc-youtube">YouTube Long-Form Editing</a>
-    <a href="index.html#svc-corporate">Corporate &amp; Brand Video</a>
+    <a href="index.html#svc-other">Other Formats, On Request</a>
     <a href="portfolio.html">Portfolio</a>
+    <a href="index.html#pricing">Pricing</a>
     <a href="index.html#workflow">Workflow</a>
     <a href="index.html#about">Leadership</a>
     <a href="join.html">Careers</a>
@@ -357,7 +442,7 @@
 <section class="hero">
   <div class="eyebrow">Portfolio &amp; Reviews</div>
   <h1>Real Work. <span>Real Clients. Real Results.</span></h1>
-  <p>Every sample below is a live playlist you can watch right now, and every review is an unedited quote from a real client who hired us on Upwork.</p>
+  <p>Every review below is an unedited quote from a real client — Upwork contracts and long-term retainers. Sample edits live on our YouTube channel.</p>
   <div class="hero-ctas">
     <a href="#testimonials" class="btn btn-primary">See Client Reviews</a>
     <a href="#samples" class="btn btn-secondary">Watch Sample Edits</a>
@@ -368,81 +453,67 @@
   <div class="container">
     <div class="section-head">
       <span class="section-tag">Sample Edits</span>
-      <h2>Six Categories, All Live on YouTube</h2>
+      <h2>Sample Edits, All Live on YouTube</h2>
       <p>Real edits from real projects — click through and watch before you commit.</p>
     </div>
-    <div class="samples-grid">
+    <div class="samples-grid duo">
       <div class="sample-card">
-        <div class="sample-embed" data-playlist="PLbEf-Gzk8sDc" role="button" tabindex="0" aria-label="Play preview: The Viral Engine sample reel">
+        <a class="sample-embed" href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener" aria-label="Watch The Viral Engine samples on the GoVidCo YouTube channel">
           <img class="sample-thumb" src="thumb-viral-engine.jpg" alt="Shorts, Reels and TikTok vertical video editing" loading="lazy">
           <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-        </div>
+        </a>
         <div class="sample-card-body">
           <div class="sample-num">01</div>
           <h3>The Viral Engine</h3>
           <p>Shorts, Reels &amp; TikTok — high-retention vertical cuts built to hook viewers in the first second.</p>
-          <a class="sample-link" href="https://www.youtube.com/@GoVidCo" data-todo="replace with real per-service YouTube playlist link" target="_blank" rel="noopener">View Samples →</a>
+          <a class="sample-link" href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener">View Samples →</a>
         </div>
       </div>
       <div class="sample-card">
-        <div class="sample-embed" data-playlist="PLa9z3olU8rE4" role="button" tabindex="0" aria-label="Play preview: The Automation Engine sample reel">
-          <img class="sample-thumb" src="thumb-automation-engine.jpg" alt="Faceless channel automated video production" loading="lazy">
-          <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-        </div>
-        <div class="sample-card-body">
-          <div class="sample-num">02</div>
-          <h3>The Automation Engine</h3>
-          <p>Cash-cow faceless channels — fully systemized, faceless video production built for consistency and scale.</p>
-          <a class="sample-link" href="https://www.youtube.com/@GoVidCo" data-todo="replace with real per-service YouTube playlist link" target="_blank" rel="noopener">View Samples →</a>
-        </div>
-      </div>
-      <div class="sample-card">
-        <div class="sample-embed" data-playlist="PLHHMHSFpqi7I" role="button" tabindex="0" aria-label="Play preview: The Authority sample reel">
-          <img class="sample-thumb" src="thumb-authority.jpg" alt="Podcast and interview editing" loading="lazy">
-          <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-        </div>
-        <div class="sample-card-body">
-          <div class="sample-num">03</div>
-          <h3>The Authority</h3>
-          <p>Podcast &amp; interview edits — polished, professional cuts that build credibility and extend your reach.</p>
-          <a class="sample-link" href="https://www.youtube.com/@GoVidCo" data-todo="replace with real per-service YouTube playlist link" target="_blank" rel="noopener">View Samples →</a>
-        </div>
-      </div>
-      <div class="sample-card">
-        <div class="sample-embed" data-playlist="PLX0ov3bhXQUk" role="button" tabindex="0" aria-label="Play preview: The Converter sample reel">
-          <img class="sample-thumb" src="thumb-converter.jpg" alt="Ad creative editing" loading="lazy">
-          <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-        </div>
-        <div class="sample-card-body">
-          <div class="sample-num">04</div>
-          <h3>The Converter</h3>
-          <p>Ad creatives — scroll-stopping, conversion-engineered edits built to perform in paid campaigns.</p>
-          <a class="sample-link" href="https://www.youtube.com/@GoVidCo" data-todo="replace with real per-service YouTube playlist link" target="_blank" rel="noopener">View Samples →</a>
-        </div>
-      </div>
-      <div class="sample-card">
-        <div class="sample-embed" data-playlist="PLGwRmJhQTJBo" role="button" tabindex="0" aria-label="Play preview: The Flagship sample reel">
+        <a class="sample-embed" href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener" aria-label="Watch The Flagship samples on the GoVidCo YouTube channel">
           <img class="sample-thumb" src="thumb-flagship.jpg" alt="YouTube long-form video editing" loading="lazy">
           <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-        </div>
+        </a>
         <div class="sample-card-body">
-          <div class="sample-num">05</div>
+          <div class="sample-num">02</div>
           <h3>The Flagship</h3>
           <p>YouTube long-form — full-length edits paced to keep viewers watching and boost watch-time.</p>
-          <a class="sample-link" href="https://www.youtube.com/@GoVidCo" data-todo="replace with real per-service YouTube playlist link" target="_blank" rel="noopener">View Samples →</a>
+          <a class="sample-link" href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener">View Samples →</a>
         </div>
       </div>
-      <div class="sample-card">
-        <div class="sample-embed" data-playlist="PLfWvih3XOeg8" role="button" tabindex="0" aria-label="Play preview: The Brand Guardian sample reel">
-          <img class="sample-thumb" src="thumb-brand-guardian.jpg" alt="Corporate and brand video editing" loading="lazy">
-          <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-        </div>
-        <div class="sample-card-body">
-          <div class="sample-num">06</div>
-          <h3>The Brand Guardian</h3>
-          <p>Corporate &amp; business video — clean, on-brand editing for internal, marketing, and executive content.</p>
-          <a class="sample-link" href="https://www.youtube.com/@GoVidCo" data-todo="replace with real per-service YouTube playlist link" target="_blank" rel="noopener">View Samples →</a>
-        </div>
+    </div>
+    <div class="other-work">
+      <h3 class="other-work-head">Past work in other formats</h3>
+      <p class="other-work-note">Ads, podcast and interview edits, faceless channel systems, and corporate video. Not part of our two core services — quoted case by case when the brief fits.</p>
+      <div class="other-work-grid">
+        <a class="other-work-card" href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener">
+          <img src="thumb-automation-engine.jpg" alt="Faceless channel automated video production" loading="lazy">
+          <div>
+            <h3>The Automation Engine</h3>
+            <p>Cash-cow faceless channels — fully systemized, faceless video production built for consistency and scale.</p>
+          </div>
+        </a>
+        <a class="other-work-card" href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener">
+          <img src="thumb-authority.jpg" alt="Podcast and interview editing" loading="lazy">
+          <div>
+            <h3>The Authority</h3>
+            <p>Podcast &amp; interview edits — polished, professional cuts that build credibility and extend your reach.</p>
+          </div>
+        </a>
+        <a class="other-work-card" href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener">
+          <img src="thumb-converter.jpg" alt="Ad creative editing" loading="lazy">
+          <div>
+            <h3>The Converter</h3>
+            <p>Ad creatives — scroll-stopping, conversion-engineered edits built to perform in paid campaigns.</p>
+          </div>
+        </a>
+        <a class="other-work-card" href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener">
+          <img src="thumb-brand-guardian.jpg" alt="Corporate and brand video editing" loading="lazy">
+          <div>
+            <h3>The Brand Guardian</h3>
+            <p>Corporate &amp; business video — clean, on-brand editing for internal, marketing, and executive content.</p>
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -453,27 +524,28 @@
     <div class="section-head">
       <span class="section-tag">Client Reviews</span>
       <h2>What Clients Say</h2>
-      <p>Unedited reviews from real Upwork clients, across YouTube niches from horror to boxing to AI.</p>
+      <p>Unedited reviews from real clients, across YouTube niches from horror to boxing to AI.</p>
+      <p style="margin-top:12px;"><a href="https://www.upwork.com/freelancers/~01e389eef945cdf1aa" target="_blank" rel="noopener" style="color:var(--red); font-weight:700;">Verify the Upwork reviews →</a></p>
     </div>
     <div class="stat-row">
       <div class="stat-box"><div class="num">5.00</div><div class="label">Average Rating</div></div>
-      <div class="stat-box"><div class="num">12+</div><div class="label">Client Reviews</div></div>
+      <div class="stat-box"><div class="num">12</div><div class="label">Reviews Shown</div></div>
       <div class="stat-box"><div class="num">100%</div><div class="label">5-Star</div></div>
+    </div>
+    <div class="testimonial-featured">
+      <div class="meta">
+        <div class="stars">★★★★★</div>
+        <h3>Louis Farah</h3>
+        <div class="dates">Three trend-based channels<br>150,000+ subscribers<br>Long-term retainer &middot; direct client message</div>
+      </div>
+      <div class="quote-body">Md. Shariful Islam is the best editor I have worked with in my 4 years of doing faceless YouTube. Extremely responsive, understanding and adaptable to work and more important he puts loyalty first. Many editors are flaky, and he always goes above and beyond with my content. Whenever there is revisions, negotiations he is understandable and can always see the bigger picture. Would highly recommend to anyone looking for an editor.<p style="margin-top:16px;"><a href="case-study.html" style="color:var(--red); font-weight:700; font-size:14.5px;">Read the full case study &rarr;</a></p></div>
     </div>
     <div class="testimonial-grid">
       <div class="testimonial-card">
-        <div class="review-shot"><img src="review-horror-niche.png" alt="5-star Upwork review for YouTube Video Editor in Horror Niche: Great work and fast with results! Easy to work with! Highly recommend!" loading="lazy"></div>
         <div class="stars">★★★★★</div>
         <h3>YouTube Editor — Horror Niche</h3>
         <div class="dates">Jun 16 – Aug 7, 2024</div>
         <p>Great work and fast with results! Easy to work with! Highly recommend!</p>
-      </div>
-      <div class="testimonial-card">
-        <div class="review-shot"><img src="review-ai-channel.png" alt="5-star Upwork review for an AI YouTube channel editing job: Both brothers are amazing, super talented, great work within the timeline." loading="lazy"></div>
-        <div class="stars">★★★★★</div>
-        <h3>YouTube Editor — AI Channel</h3>
-        <div class="dates">Mar 13 – Aug 1, 2024</div>
-        <p>Both brothers are amazing. Super talented. Great work and within the timeline. I would highly recommend them.</p>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
@@ -482,14 +554,12 @@
         <p>Shariful is an excellent video editor and easy to communicate with. Highly recommended!</p>
       </div>
       <div class="testimonial-card">
-        <div class="review-shot"><img src="review-tiktok-shorts.png" alt="5-star Upwork review for short-form TikTok and YouTube video editing: Absolutely wonderful work and very creative." loading="lazy"></div>
         <div class="stars">★★★★★</div>
         <h3>Shorts, TikTok &amp; YouTube</h3>
         <div class="dates">Feb 8 – Apr 13, 2024</div>
         <p>Absolutely wonderful work and very creative, invest in him and he'll get what you need done.</p>
       </div>
       <div class="testimonial-card">
-        <div class="review-shot"><img src="review-boxing.png" alt="5-star Upwork review for a YouTube boxing channel: Amazing work, quick turnaround, best Upwork work relationship ever, very responsive." loading="lazy"></div>
         <div class="stars">★★★★★</div>
         <h3>YouTube Boxing Channel</h3>
         <div class="dates">Oct 25, 2023 – Mar 23, 2024</div>
@@ -508,14 +578,12 @@
         <p>Great experience &amp; rapid turnaround.</p>
       </div>
       <div class="testimonial-card">
-        <div class="review-shot"><img src="review-faceless.png" alt="5-star Upwork review for a faceless YouTube video editing job: Very prompt, kind, and does great work, a true professional." loading="lazy"></div>
         <div class="stars">★★★★★</div>
         <h3>Faceless YouTube Editor</h3>
         <div class="dates">Feb 13, 2024</div>
         <p>Shariful is great! Very prompt, kind, and does great work!! A true professional!</p>
       </div>
       <div class="testimonial-card">
-        <div class="review-shot"><img src="review-love-working.png" alt="5-star Upwork review: I love working with Md. Shariful, very professional and experienced, will continue working with him." loading="lazy"></div>
         <div class="stars">★★★★★</div>
         <h3>YouTube Video Editor</h3>
         <div class="dates">Feb 1 – 6, 2024</div>
@@ -534,7 +602,6 @@
         <p>I had a great experience, the quality of the work is excellent, and I will definitely order again!</p>
       </div>
       <div class="testimonial-card">
-        <div class="review-shot"><img src="review-trustworthy.png" alt="5-star Upwork review: Absolutely amazing work, trustworthy, reliable, quick and effective, everything you need in an editor." loading="lazy"></div>
         <div class="stars">★★★★★</div>
         <h3>Video Editing</h3>
         <div class="dates">Jun 14 – Oct 30, 2023</div>
@@ -563,23 +630,23 @@
       <p>From Vision to Viral.</p>
       <p style="margin-top:8px;"><a href="https://wa.me/8801797861891" target="_blank" rel="noopener" style="color:var(--gray-dim); display:inline-flex; align-items:center; gap:6px;"><img src="icon-whatsapp.svg" alt="" width="14" height="14">WhatsApp: +880 1797-861891</a></p>
       <p style="margin-top:8px;"><a href="https://www.linkedin.com/company/go-vidco/" target="_blank" rel="noopener" style="color:var(--gray-dim); display:inline-flex; align-items:center; gap:6px;"><img src="icon-linkedin.png" alt="" width="14" height="14">LinkedIn: GoVidCo</a></p>
+      <p style="margin-top:8px;"><a href="https://www.upwork.com/agencies/1938718874890686680/" target="_blank" rel="noopener" style="color:var(--gray-dim); display:inline-flex; align-items:center; gap:6px;"><img src="icon-upwork.png" alt="" width="14" height="14">Upwork: GoVidCo Agency</a></p>
       <p style="margin-top:8px;"><a href="https://www.youtube.com/@GoVidCo" target="_blank" rel="noopener" style="color:var(--gray-dim); display:inline-flex; align-items:center; gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex:none;" aria-hidden="true"><path d="M23.5 6.2c-.3-1.1-1.1-1.9-2.2-2.2C19.3 3.5 12 3.5 12 3.5s-7.3 0-9.3.5c-1.1.3-1.9 1.1-2.2 2.2C0 8.2 0 12 0 12s0 3.8.5 5.8c.3 1.1 1.1 1.9 2.2 2.2 2 .5 9.3.5 9.3.5s7.3 0 9.3-.5c1.1-.3 1.9-1.1 2.2-2.2.5-2 .5-5.8.5-5.8s0-3.8-.5-5.8zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"/></svg>YouTube: @GoVidCo</a></p>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
       <a href="index.html#about">Leadership</a>
+      <a href="index.html#pricing">Pricing</a>
       <a href="index.html#workflow">Workflow</a>
       <a href="portfolio.html">Portfolio</a>
+      <a href="case-study.html">Case Study</a>
       <a href="contact.html">Contact</a>
     </div>
     <div class="footer-col">
       <h4>Services</h4>
         <a href="index.html#svc-shorts">Shorts, Reels &amp; TikTok</a>
-        <a href="index.html#svc-faceless">Faceless Channel System</a>
-        <a href="index.html#svc-podcast">Podcast &amp; Interview Editing</a>
-        <a href="index.html#svc-ads">Ad Creatives</a>
         <a href="index.html#svc-youtube">YouTube Long-Form Editing</a>
-        <a href="index.html#svc-corporate">Corporate &amp; Brand Video</a>
+        <a href="index.html#svc-other">Other Formats, On Request</a>
     </div>
     <div class="footer-col">
       <h4>Resources</h4>
@@ -640,40 +707,6 @@
     btn.addEventListener('click', function(){
       localStorage.setItem('govidco_cookie_consent', '1');
       banner.classList.remove('show');
-    });
-  })();
-</script>
-
-<script>
-  (function(){
-    // Sample playlist previews — click-to-load YouTube embeds. The iframe is only
-    // created on click/keypress, so nothing loads (and nothing can show a broken-
-    // embed error) until a visitor actively presses play.
-    function loadEmbed(el){
-      if (el.classList.contains('loaded')) return;
-      var id = el.getAttribute('data-playlist');
-      if (!id) return;
-      // Safety fallback: real YouTube "PL" playlist IDs are always 34 characters.
-      // Anything shorter is a placeholder ID that would show a broken-embed error --
-      // open the channel instead until Shariful adds the real per-service playlist ID.
-      if (id.length < 30) {
-        window.open('https://www.youtube.com/@GoVidCo', '_blank', 'noopener');
-        return;
-      }
-      el.classList.add('loaded');
-      var iframe = document.createElement('iframe');
-      iframe.src = 'https://www.youtube.com/embed/videoseries?list=' + encodeURIComponent(id) + '&autoplay=1&rel=0';
-      iframe.title = el.getAttribute('aria-label') || 'YouTube video player';
-      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-      iframe.setAttribute('allowfullscreen', '');
-      iframe.loading = 'lazy';
-      el.appendChild(iframe);
-    }
-    document.querySelectorAll('.sample-embed').forEach(function(el){
-      el.addEventListener('click', function(){ loadEmbed(el); });
-      el.addEventListener('keydown', function(e){
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); loadEmbed(el); }
-      });
     });
   })();
 </script>
